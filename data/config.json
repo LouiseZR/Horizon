@@ -9,7 +9,6 @@
     "max_tokens": 4096,
     "throttle_sec": 0,
     "languages": ["zh"]
-}
   },
   "sources": {
     "github": [
