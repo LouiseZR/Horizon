@@ -6,7 +6,8 @@
     "api_key_env": "MINIMAX_API_KEY",
     "temperature": 0.3,
     "max_tokens": 4096,
-    "throttle_sec": 0
+    "throttle_sec": 0,
+    "languages": ["zh"]
   },
   "sources": {
     "github": [
@@ -96,7 +97,6 @@
     "delivery": "summary",
     "overview_position": "first",
     "platform": "feishu",
-    "layout": "markdown",
-    "languages": ["zh"]
+    "layout": "markdown"
   }
 }
