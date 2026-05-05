@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "ai": {
+    "provider": "minimax",
+    "model": "MiniMax-Text-01",
+    "api_key_env": "MINIMAX_API_KEY",
+    "temperature": 0.3,
+    "max_tokens": 4096,
+    "throttle_sec": 0
+  },
+  "sources": {
+    "github": [
+      {
+        "type": "user_events",
+        "username": "anthropics",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "openai",
+        "repo": "openai-cookbook",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "mistralai",
+        "repo": "mistral-finetune",
+        "enabled": true
+      }
+    ],
+    "hackernews": {
+      "enabled": true,
+      "fetch_top_stories": 30,
+      "min_score": 100
+    },
+    "rss": [
+      {
+        "name": "Simon Willison",
+        "url": "https://simonwillison.net/atom/everything/",
+        "enabled": true,
+        "category": "ai-tools"
+      },
+      {
+        "name": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/feed.xml",
+        "enabled": true,
+        "category": "ai"
+      },
+      {
+        "name": "The Batch",
+        "url": "https://www.deepmind.com/blog/rss.xml",
+        "enabled": false,
+        "category": "ai-research"
+      }
+    ],
+    "reddit": {
+      "enabled": true,
+      "subreddits": [
+        {
+          "subreddit": "MachineLearning",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 15,
+          "min_score": 50
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 15,
+          "min_score": 30
+        }
+      ],
+      "users": [],
+      "fetch_comments": 3
+    },
+    "twitter": {
+      "enabled": false,
+      "users": ["ylecun", "karpathy"],
+      "fetch_limit": 10,
+      "fetch_reply_text": false,
+      "max_replies_per_tweet": 3,
+      "max_tweets_to_expand": 10,
+      "reply_min_likes": 5
+    }
+  },
+  "filtering": {
+    "ai_score_threshold": 6.0,
+    "time_window_hours": 24
+  },
+  "webhook": {
+    "enabled": true,
+    "url": "https://open.feishu.cn/open-apis/bot/v2/hook/c1b28582-aa66-448d-8711-e6ad25738896",
+    "delivery": "summary",
+    "overview_position": "first",
+    "platform": "feishu",
+    "layout": "markdown",
+    "languages": ["zh"]
+  }
+}
