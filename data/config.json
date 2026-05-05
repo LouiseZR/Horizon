@@ -1,13 +1,15 @@
 {
   "version": "1.0",
-  "ai": {
+"ai": {
     "provider": "minimax",
     "model": "MiniMax-M2.7",
-    "api_key_env": "MINIMAX_API_KEY",
+    "api_key_env": "ANTHROPIC_API_KEY",
+    "base_url_env": "ANTHROPIC_BASE_URL",
     "temperature": 0.3,
     "max_tokens": 4096,
     "throttle_sec": 0,
     "languages": ["zh"]
+}
   },
   "sources": {
     "github": [
